@@ -1,0 +1,840 @@
+
+<!DOCTYPE html>
+<html lang="en-US" class="is-locked">
+
+<!-- Mirrored from www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 May 2020 13:25:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="../../xmlrpc.php">
+<title>
+        Bornfight | Blog | How to implement PWA and Barba.js into internet kiosks    </title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../wp-content/themes/bf/static/ui/favicon/apple-touch-icondc0a.png?x22406">
+<link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bf/static/ui/favicon/favicon-32x32dc0a.png?x22406">
+<link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bf/static/ui/favicon/favicon-16x16dc0a.png?x22406">
+<link rel="manifest" href="../../wp-content/themes/bf/static/ui/favicon/site.html">
+<link rel="mask-icon" href="../../wp-content/themes/bf/static/ui/favicon/safari-pinned-tabdc0a.svg?x22406" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PV9LGPL');</script>
+
+
+<meta name="description" content="In modern development workflow, the environment is sometimes the most important element when choosing technologies and optimization techniques." />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Blog | Implementing PWA and Barba.js into internet kiosks" />
+<meta property="og:description" content="In modern development, the environment is sometimes the most important element." />
+<meta property="og:url" content="https://www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/" />
+<meta property="og:site_name" content="Bornfight" />
+<meta property="article:publisher" content="https://www.facebook.com/Bornfight.company/" />
+<meta property="article:modified_time" content="2019-05-17T12:52:50+00:00" />
+<meta property="og:image" content="https://www.bornfight.com/wp-content/uploads/2018/09/fb_share.png" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1260" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog | Implementing PWA and Barba.js into internet kiosks" />
+<meta name="twitter:description" content="In modern development, the environment is sometimes the most important element." />
+<meta name="twitter:image" content="https://www.bornfight.com/wp-content/uploads/2018/09/fb_share.png" />
+<meta name="twitter:creator" content="@Bornfight_" />
+<meta name="twitter:site" content="@Bornfight_" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.bornfight.com/#website","url":"https://www.bornfight.com/","name":"Bornfight","description":"Bornfight","potentialAction":[{"@type":"SearchAction","target":"https://www.bornfight.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/#primaryimage","inLanguage":"en-US","url":"https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/1.gif"},{"@type":"WebPage","@id":"https://www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/#webpage","url":"https://www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/","name":"Bornfight | Blog | How to implement PWA and Barba.js into internet kiosks","isPartOf":{"@id":"https://www.bornfight.com/#website"},"primaryImageOfPage":{"@id":"https://www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/#primaryimage"},"datePublished":"2018-09-10T11:35:43+00:00","dateModified":"2019-05-17T12:52:50+00:00","description":"In modern development workflow, the environment is sometimes the most important element when choosing technologies and optimization techniques.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/"]}]}]}</script>
+
+<link rel='dns-prefetch' href='http://www.google.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="stylesheet" href="../../wp-content/cache/minify/e59d1dc0a.css?x22406" media="all" />
+<script src="../../wp-content/cache/minify/c7035dc0a.js?x22406"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cf7_dropfiles = {"url_plugin":"https:\/\/www.bornfight.com\/wp-content\/plugins\/contact-form-7-drop-files\/","ajax_url":"https:\/\/www.bornfight.com\/wp-admin\/admin-ajax.php","text_content_limit":"Error: POST Content-Length limit","text_remove":"Remove","text_abort":"Abort","text_maximum":"You can only upload a maximum of"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/contact-form-7-drop-files/frontend/js/dropfiles-cf7f0a2.js?x22406&amp;ver=1588771452'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
+<link rel='shortlink' href='../../indexd7bf.html?p=1015' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed986f.json?url=https%3A%2F%2Fwww.bornfight.com%2Fblog%2Fhow-to-implement-pwa-and-barba-js-into-internet-kiosks%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedf903?url=https%3A%2F%2Fwww.bornfight.com%2Fblog%2Fhow-to-implement-pwa-and-barba-js-into-internet-kiosks%2F&amp;format=xml" />
+<style type="text/css">body .buorg {
+  background-color: #fff;
+  font-family: PlainLight;
+}
+#buorgul {
+    background-color: #0d0d0d !important;
+    color: #fff!important;
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-weight: 700 !important;
+    font-family: PlainBold;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    border-radius: 0 !important;
+}
+#buorgig {
+    background-color: #fff !important;
+    border: 1px solid #0d0d0d;
+    color: #0d0d0d!important;
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-weight: 700 !important;
+    font-family: PlainBold;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 0 !important;
+}
+.buorg-mainmsg {
+    letter-spacing: .2px;
+    font-size: .7rem;
+    line-height: 1.5;
+}
+.buorg-moremsg {
+    letter-spacing: .2px;
+    font-size: .7rem;
+    line-height: 1.5;
+}
+</style></head>
+<body data-rsssl=1 class="blog-template-default single single-blog postid-1015 is-desktop">
+<script>
+    const apiUrl = '../../wp-json/api/v1.json';
+
+    </script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV9LGPL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="c-main-loader js-main-loader" style="background-color: #0d0d0d;">
+<div class="c-main-loader__logo js-main-loader-logo">
+<span class="js-main-loader-logo">
+<img src="../../wp-content/themes/bf/static/ui/bf-logo-lightdc0a.svg?x22406" alt="Bornfight">
+</span>
+</div>
+<div class="c-main-loader__container js-main-loader-container">
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/09/01-big_1440x980_acf_cropped.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/09-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/03-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/04-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/05-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/06-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/07-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/08-big.jpg);"></i>
+</div>
+<i class="c-main-loader__curtain js-main-loader-curtain"></i>
+</div>
+<div class="c-page-transitions js-page-transitions"></div>
+<div class="c-work-transitions js-work-transition-layer"></div>
+<div class="c-cookie-bar js-cookie-bar">
+<div class="c-cookie-bar__inner">
+<div class="c-cookie-bar__left">
+<p class="u-b6">
+We use cookies to optimize your user experience. We also share information about your use of our site with our social media, advertising and analytics partners. By continuing to use our site you agree to using cookies in accordance with our <a href="../../privacy-policy/index.html" class="c-link">Privacy Policy</a>. </p>
+</div>
+<div class="c-cookie-bar__right">
+<span class="c-button c-button--primary js-cookie-accept" data-name="bornfight.cookie.acceptance" data-value="1">
+<span>
+Accept </span>
+</span>
+</div>
+</div>
+</div>
+<div class="c-navigation js-navigation">
+<div class="c-navigation__menu js-menu">
+<div class="c-navigation__logo js-navigation-logo">
+<a href="../../index.html" class="js-navigation-link" data-item="2">
+<img src="../../wp-content/themes/bf/static/ui/bf-logo-darkdc0a.svg?x22406" alt="Bornfight">
+</a>
+</div>
+<div class="c-navigation__menu-left">
+<div class="navigation-links-wrapper">
+<div class="navigation-links-wrapper__inner">
+<ul class="navigation-links navigation-links--top">
+<li class="navigation-links__item js-navigation-item">
+<a data-item="8" href="../../services/index.html" class="c-button c-button--text c-button--large js-navigation-link">
+<span>
+What we do </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="work" href="../../work/index.html" class="c-button c-button--text c-button--large js-navigation-link">
+<span>
+Our work </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="blog" href="../index.html" class="c-button c-button--text c-button--large js-navigation-link">
+<span>
+Blog </span>
+</a>
+</li>
+</ul>
+<ul class="navigation-links navigation-links--bottom">
+<li class="navigation-links__item js-navigation-item">
+<a data-item="2" href="../../index.html" class="c-button c-button--text js-navigation-link js-home ">
+<span>
+Home </span>
+</a>
+ </li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="413" href="../../careers/index.html" class="c-button c-button--text js-navigation-link js-careers ">
+<span>
+Careers </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="15" href="../../culture/index.html" class="c-button c-button--text js-navigation-link js-about ">
+<span>
+About </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="resources" href="../../resources/index.html" class="c-button c-button--text js-navigation-link js-resources ">
+<span>
+Resources </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="3833" href="../../newsletter/index.html" class="c-button c-button--text js-navigation-link js-subscribe-to-our-newsletter ">
+<span>
+Subscribe to our newsletter </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="28" href="../../contact/index.html" class="c-button c-button--text js-navigation-link js-start-a-project                                 c-button--icon
+                                ">
+<span>
+Start a project <svg class="icon icon-arrow-right">
+<use xlink:href="../../wp-content/themes/bf/static/icomoon/symbol-defsdc0a.svg?x22406#icon-arrow-right"></use>
+</svg>
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<ul class="c-contact-info c-contact-info--small">
+<li class="c-contact-info__item js-navigation-contact-info">
+<span class="u-b6">
+t:
+</span>
+<a class="c-button c-button--text c-button--small" href="tel:+385 1 3333 710">
+<span>
++385 1 3333 710 </span>
+</a>
+</li>
+<li class="c-contact-info__item js-navigation-contact-info">
+<span class="u-b6">
+m:
+</span>
+<a class="c-button c-button--text c-button--bordered c-button--small" href="mailto:hello@bornfight.com">
+<span>hello@bornfight.com</span>
+</a>
+</li>
+</ul>
+</div>
+<i class="c-menu-bg__cover js-menu-bg-cover"></i>
+<div class="c-navigation__menu-right">
+<div class="c-menu-bg js-menu-bg">
+<div class="c-menu-bg__canvas js-menu-bg-list">
+<div class="canvas js-menu-bg-canvas" data-displacement-map="https://www.bornfight.com/wp-content/themes/bf/static/ui/rock.png"></div>
+</div>
+<ul class="c-menu-bg__list js-menu-bg-list">
+<li class="c-menu-bg__item">
+<i class="c-menu-bg__image js-menu-bg-image" data-menu-bg="https://www.bornfight.com/wp-content/uploads/2018/08/01.jpg" style="background-image: url(../../wp-content/uploads/2018/08/01.jpg);"></i>
+</li>
+<li class="c-menu-bg__item">
+<i class="c-menu-bg__image js-menu-bg-image" data-menu-bg="https://www.bornfight.com/wp-content/uploads/2018/08/02.jpg" style="background-image: url(../../wp-content/uploads/2018/08/02.jpg);"></i>
+</li>
+<li class="c-menu-bg__item">
+<i class="c-menu-bg__image js-menu-bg-image" data-menu-bg="https://www.bornfight.com/wp-content/uploads/2018/08/03-1.jpg" style="background-image: url(../../wp-content/uploads/2018/08/03-1.jpg);"></i>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="barba-wrapper">
+<div class="barba-container js-init-color" data-menu-item="blog" data-init-color="#0d0d0d" data-namespace="blog-single">
+<div class="c-clip-element c-clip-element--logo js-clip-element ">
+<div class="c-logo c-logo--navigation js-menu-stage">
+<a href="../../index.html" class="js-home js-exit-enter-el" data-item="2">
+<i class="bornfight bornfight--dark">
+<img src="../../wp-content/themes/bf/static/ui/BF-sign-darkdc0a.svg?x22406" alt="">
+</i>
+<i class="bornfight bornfight--light">
+<img src="../../wp-content/themes/bf/static/ui/BF-sign-lightdc0a.svg?x22406" alt="">
+</i>
+</a>
+</div>
+</div>
+<div class="c-clip-element c-clip-element--menu-trigger js-clip-element">
+<div class="c-menu-trigger js-menu-trigger js-exit-enter-el">
+<i class="c-menu-trigger__bar c-menu-trigger__bar--top"></i>
+<i class="c-menu-trigger__bar c-menu-trigger__bar--middle"></i>
+<i class="c-menu-trigger__bar c-menu-trigger__bar--bottom"></i>
+</div>
+</div>
+<div class="c-clip-element c-clip-element--email js-clip-element">
+<div class="c-navigation-email js-menu-stage">
+<a class="u-b6 js-exit-enter-el" href="mailto:hello@bornfight.com">hello@bornfight.com</a>
+</div>
+</div>
+<div class="c-secondary-navigation js-clip-element">
+<div class="c-secondary-navigation__left">
+<ul class="c-secondary-navigation-links">
+<li class="c-secondary-navigation-links__item js-menu-stage">
+<a href="../index.html" class="c-button c-button--text c-button--bordered c-button--icon c-button--small">
+<span>
+View all posts </span>
+</a>
+</li>
+</ul>
+</div>
+<div class="c-secondary-navigation__right js-menu-stage">
+<a href="../../contact/index.html" class="c-button c-button--primary js-secondary-nav-cta">
+<span>
+Start a project </span>
+</a>
+</div>
+</div>
+<div class="o-page-wrapper o-page-wrapper--blog-single js-page-wrapper" id="page-wrapper">
+<header class="c-header c-header--blog-single u-clearfix">
+<div class="o-container">
+<h1 class="u-a5 js-animation-stage-title">
+How to Implement PWA and Barba.js Into Internet Kiosks </h1>
+<div class="c-details-info c-details-info--has-author-title u-clearfix">
+<div class="c-details-info__item u-b6 js-animation-stage-element">
+<strong>
+Author
+</strong>
+<span>
+Mario Novoselec & Nino Mihovilić </span>
+<span>
+</span>
+</div>
+<div class="c-details-info__item u-b6 js-animation-stage-element">
+<strong>
+Category
+</strong>
+<span>
+Development </span>
+</div>
+<div class="c-details-info__item u-b6 js-animation-stage-element">
+<strong>
+Date
+</strong>
+<span>Sep 10, 2018</span>
+</div>
+<span class="c-details-info__reading-time u-b6 js-animation-stage-element">
+<span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 6</span> <span class="rt-label rt-postfix">min read</span></span> </span>
+</div>
+
+<div class="c-blog-image js-animation-stage-element">
+<figure class="o-media-wrapper o-media-wrapper--16-9">
+<picture class="">
+<source media="(min-width: 720px)" srcset="" data-srcset="https://www.bornfight.com/wp-content/uploads/2018/09/01-big_1050x590_acf_cropped.jpg">
+<img class="lazyload" src="#" data-src="https://www.bornfight.com/wp-content/uploads/2018/09/01-1_480x270_acf_cropped.jpg?x22406" alt="">
+</picture>
+</figure>
+<p class="o-media-caption">
+</p>
+</div>
+
+</div>
+</header>
+<section class="o-section o-section--blog-single-content u-clearfix">
+<div class="o-container">
+<div class="c-editor-content">
+
+<h3>In modern development workflow, the environment is sometimes the most important element when choosing technologies and optimization techniques, so it’s important to understand its specific features and apply the most convenient solutions.</h3>
+<p>__________<br />
+Want to become a part of the Bornfight team as our new Software Developer? <a href="../../careers/software-developer/index.html" target="_blank" rel="noopener noreferrer">Take a look at the job posting and send us your application!</a><br />
+__________</p>
+<p>The project we’ll describe here is an interactive internet kiosk that’s used as an extension for the <a href="https://likeus.hr/" target="_blank" rel="noopener noreferrer">LikeUs mobile application</a>. LikeUs is a mobile app that makes it easy for users to choose a place to go out, have coffee or listen to a concert. Because Zagreb’s Tkalčićeva street is a place where quite a lot of young people hang out, we decided it was the right place for our offline promotion of the LikeUs app.</p>
+<h4>Implementing the Kiosk Mode</h4>
+<p>One of the first challenges we faced was the implementation of the kiosk browser mode on our device. It was an Android Box and we used Chrome as a web browser that will run the app. Kiosk browser mode is a mode in which you run the application in fullscreen and without any browser user interface or, in our case, without any Android user interface.</p>
+<p>The intent is to prevent users from running anything other than the browser-based content. As there are hundreds of kiosk mode apps, we decided to use one of the available applications instead of building one from the ground up.</p>
+<p>After some research, we decided to use the <a href="https://www.android-kiosk.com/" target="_blank" rel="noopener noreferrer">Kiosk Browser Lockdown</a> app. It has all of the features we were looking for:</p>
+<ul>
+<li>Locking the device to a single URL</li>
+<li>Hiding toolbar options</li>
+<li>Hiding the notifications screen</li>
+<li>Hiding the Android user interface</li>
+</ul>
+<p>The next step was to test the PWA in the Android environment and in the Kiosk Browser app. That’s when we discovered that things won’t go as smooth as we planned!</p>
+<p>The first problem we encountered was on the frontend side – the final website seemed like an upscaled version of the initial design, and this was due to some screen limitations and a different rendering environment. As the deadline was approaching, we didn’t have enough time to tweak every single item in CSS to fit the initial design outlines, so we decided to downscale the entire document. It was a reasonable approach considering all the inputs we had. Having to test everything once more was a big downside, but we had to be sure that everything will work in this context.</p>
+<p>The second problem was that external scripts like Google Maps weren’t loading in the Kiosk Browser app with the PWA, so we did a little tweak. We started the Kiosk Browser app, which removed the Android user interface, and then exited the Kiosk Browser app and started the PWA outside of the Kiosk Browser app. This way we managed to remove the Android interface with all external scripts loading as they were supposed to.</p>
+<p><img class="aligncenter size-full wp-image-1031" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/1.gif" alt="" width="1200" height="900" /></p>
+<h4>Developing a Progressive Web App</h4>
+<p>After going through the project brief and specifications, the first thing that came to our mind was… we should do a PWA (Progressive Web App).<br />
+A Progressive Web App is an application that provides similar capabilities and functionalities as native mobile apps:</p>
+<ul>
+<li>Service workers allow apps to show content nearly instantly and reliably because they cache every request</li>
+<li>There is an ability to add the app to the home screen like a normal native app</li>
+<li>Push notifications can be implemented for multipurpose usages</li>
+<li>The app is fast and smooth</li>
+<li>It uses HTTPS and is easy to implement.</li>
+</ul>
+<p>After evaluating client’s requests, all features of the PWA were meeting our requests.<br />
+Our requests were:</p>
+<ul>
+<li>To build an app that will be used on an interactive screen</li>
+<li>The app should use an existing API we build for our LikeUs mobile app</li>
+<li>The device used will be an Android Box</li>
+<li>Internet access will be restricted because the app would be connected to a public network (this would change later)</li>
+<li>The app should have an additional section for banners and a banner management system</li>
+</ul>
+<p>We could build a web app with our existing API without having to implement additional functionalities, and we could also build a simple CMS (content management system) for banner management and push notifications for content reloading. As internet access would be restricted and unstable, we could use the PWA feature to cache pages and serve them even when the app is offline.</p>
+<p>Be sure to check out an <a href="https://medium.com/@jewbre/service-workers-6a5c13c9a123" target="_blank" rel="noopener noreferrer">in-depth tutorial</a> and explanation for Service Workers.</p>
+<h4>Tweaking the Banner Management System</h4>
+<p>The app is divided into two sections. The top section is the banner section, and the bottom part is the main section divided into tabs. We have two types of banners – Youtube videos and images, and since banners can be changed, we needed to develop a CMS. We developed a simple CMS in which the client can enter Youtube videos and images into a slider. The problem we encountered here was refreshing the app to reload new banner content. You see, because the app was using Barba.js, it was never refreshing. To make it work, we used a cool feature of our PWA – push notifications. Push notifications are a feature that uses Notifications API and the Push API to send messages from the server to the client.</p>
+<p>How did push notifications help solve our content reloading problem?<br />
+The solution is pretty simple and straightforward. When the user changes banner content in the CMS, we send a push to the PWA and then the PWA refreshes two times. PWA needs to be refreshed two times to delete cache and to reload new content.</p>
+<h4>Dealing with External Obstacles</h4>
+<p>Internet kiosks are often placed in outdoor environments where internet connection is sometimes unstable and slow. When the internet connection is public and in a pretty crowded street, you face a lot of problems when using real-time communication and external APIs. A common “hacky” approach is to extend the delay time and hope that everything works well. Even though this is not the preferred way, it can serve as a backup if everything else fails.</p>
+<p>Google Maps was one of the external APIs that gave us a lot of headaches. We had to reload and add new pins, but on a slow connection, this was sometimes impossible.</p>
+<p><img class="aligncenter size-full wp-image-1030" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/2.gif" alt="" width="1200" height="900" /></p>
+<h4><strong>Balancing Between Fixed and Dynamic Content</strong></h4>
+<p>Optimization is not only applied in the realm of advanced caching techniques and content delivery networks. Smart layout placement and understanding elements that can be “pushed out” of the page reloading flow can reduce the number of requests and speed up entire navigation flow.</p>
+<p>The advertising content in the kiosk was hosted on Youtube – it was a video slider that was repeating through all pages. Below that, we had the main content with inline navigation. When selecting different navigation items, default browser behaviour was to reload the entire page, including that fixed advertising area. It’s a performance nightmare, especially when having external scripts such as Youtube API.</p>
+<p><img class="aligncenter size-full wp-image-1029" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/image1.jpg" alt="" width="900" height="1239" srcset="https://www.bornfight.com/wp-content/uploads/2018/08/image1.jpg 900w, https://www.bornfight.com/wp-content/uploads/2018/08/image1-218x300.jpg 218w, https://www.bornfight.com/wp-content/uploads/2018/08/image1-768x1057.jpg 768w, https://www.bornfight.com/wp-content/uploads/2018/08/image1-744x1024.jpg 744w" sizes="(max-width: 900px) 100vw, 900px" /></p>
+<p>The question here is – how to reload only one specific part of the page? Well, there will obviously be no browser reloading and the only thing that can be done is changing content in the background without leaving the page. Because of the implemented analytics, we had to update the URL accordingly. We did this by using the PJAX (Push State Ajax) technology. This technology allows content prefetching and swapping target DOM nodes in the background. To avoid content flashing, create a simple fade transition that fires when content changes. As it’s time-consuming to manually manage all states of content swapping, we used an external library called Barba.js. This library allows advanced transition management and is compatible with all animation frameworks.</p>
+<p><img class="aligncenter size-full wp-image-1028" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/3.gif" alt="" width="1200" height="900" /></p>
+<p>Barba.js has internal state caching that can be used to leverage browser caching and optimize loading time. Barba cache is a global Javascript object where every value is a Promise that has to be resolved.</p>
+<h4>Implementing Analytics and Virtual Pageviews</h4>
+<p>We wanted to measure user interaction and page views. Because we are using Barba.js, this is basically a one-page app without page reloads, so the trick to measure page views in this type of app is to use Virtual Pageviews. They are page hits sent to Google Analytics, without actually reloading the page. The first step is to include the <a href="https://developers.google.com/tag-manager/quickstart" target="_blank" rel="noopener noreferrer">Google Tag manager</a> code, and then to actually send Virtual Pageviews to the data layer. We can do it with the next snippet:</p>
+<pre>dataLayer.push({
+'event': 'VirtualPageview',
+'virtualPageURL': currentUrl,
+'virtualPageTitle': title
+});</pre>
+<p>This snippet needs to be called on each new page. On each user interaction that opens a new “page”, we call this snippet that sends the page URL and the page title to Google Analytics. This way we can track pageviews in single page apps that use Barba.js or any other PJAX technology.</p>
+<p><img class="aligncenter size-full wp-image-1027" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/4.gif" alt="" width="1200" height="900" /></p>
+<h4>To Conclude</h4>
+<p>When working in a specific environment, sometimes the “by the book” solution is not your only solution. There is an opportunity to innovate and use some common tools and libraries in a not so standard environment with a specific set of challenges.</p>
+<p>__________<br />
+We’re available for partnerships and open for new projects. <a href="../../contact/index.html" target="_blank" rel="noopener noreferrer">If you have an idea you&#8217;d like to discuss, share it with our team!</a></p>
+</div>
+</div>
+</section>
+<script>
+        let blogNewsletterForm = '3213';
+    </script>
+<section class="o-section o-section--blog-single-newsletter u-clearfix">
+<div class="o-container">
+<div class="c-blog-newsletter">
+<div class="c-blog-newsletter__form-wrapper">
+<p class="u-a2 c-blog-newsletter__title">
+Subscribe to our newsletter </p>
+<div class="u-b0 c-blog-newsletter__content">
+<p>Subscribe now and get our top news once a month.</p>
+<p>100% development, design & strategy.</p>
+<p>100% spam-free.</p>
+</div>
+<div class="c-blog-newsletter__form js-form" data-form-id="11">
+<div role="form" class="wpcf7" id="wpcf7-f3213-p1015-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="https://www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/#wpcf7-f3213-p1015-o1" method="post" class="wpcf7-form mailchimp-ext-0.5.18" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="3213" />
+<input type="hidden" name="_wpcf7_version" value="5.1.7" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f3213-p1015-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="1015" />
+<input type="hidden" name="g-recaptcha-response" value="" />
+</div>
+<div class="c-form">
+<div class="c-form__row c-form__row--input">
+<span class="c-fieldset js-form-fieldset wpcf7-form-control-wrap your-email">
+<div class="c-fieldset__field-wrapper">
+<label for="your-email" class="c-label">
+Enter your email address </label>
+ <input id="your-email" name="your-email" class="c-input js-form-input wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-email" type="email" value="">
+</div>
+</span>
+<button type="submit" class="c-button c-button--block c-button--secondary wpcf7-submit">
+<span>Subscribe</span>
+</button>
+</div>
+<div class="c-form__row">
+<span class="c-fieldset wpcf7-form-control-wrap agree-pp">
+<div class="c-checkbox">
+<input type="checkbox" class="wpcf7-form-control c-checkbox__input js-form-agree-checkbox" id="agree-pp" name="agree-pp" />
+<label class="c-checkbox__label" for="agree-pp">
+I agree to the Terms of Service and Privacy Policy </label>
+</div>
+</span>
+</div>
+<div class="c-form__row">
+<span class="c-fieldset wpcf7-form-control-wrap agree-newsletter">
+<div class="c-checkbox">
+<input type="checkbox" class="wpcf7-form-control c-checkbox__input js-form-agree-checkbox" id="agree-newsletter" name="agree-newsletter" />
+<label class="c-checkbox__label" for="agree-newsletter">
+I want to receive Bornfight newsletters on this e-mail </label>
+</div>
+</span>
+</div>
+</div><div class="wpcf7-response-output wpcf7-display-none"></div><p style="display: none !important"><span class="wpcf7-form-control-wrap referer-page"><input type="hidden" name="referer-page" value="https://www.bornfight.com/blog/an-evolving-idea-of-something-i-call-a-qa-fortress/" class="wpcf7-form-control wpcf7-text referer-page" aria-invalid="false"></span></p>
+<input type="hidden" value="0" id="cf7-droptype"></form></div> </div>
+</div>
+<div class="c-blog-newsletter__thank-you js-form-thank-you">
+<p class="u-a2">
+You're now a part of our club! </p>
+<p class="u-b0">
+We got your e-mail address and you'll get our next newsletter! </p>
+</div>
+</div>
+</div>
+</section>
+<section class="o-section o-section--related-content u-clearfix">
+<div class="o-container">
+<div class="c-related-content">
+<div class="c-related-content__top">
+<h3 class="u-a6" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-1.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Related posts </h3>
+<div class="c-related-content__link-wrapper" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "delay":"0.1", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<a href="../index.html" class="c-button c-button--text c-button--bordered">
+<span>
+Read more posts </span>
+</a>
+</div>
+</div>
+<div class="c-related-content__bottom">
+<div class="c-article-list c-article-list--2">
+
+<a href="../getting-started-with-vr-development/index.html" class="c-article js-post-item">
+<div class="c-article__image">
+<figure class="o-media-wrapper o-media-wrapper--4-3 js-image-wrapper" data-animation-delay="0">
+<i class="o-media-wrapper__mask js-image-mask"></i>
+<picture class="">
+<img class="js-image" src="../../wp-content/uploads/2018/09/vr-featured_480x320_acf_croppeddc0a.jpg?x22406" alt="">
+</picture>
+</figure>
+</div>
+<div class="c-article__caption">
+<div class="caption">
+<div class="caption__header u-b6">
+<span class="caption__category">Development</span>
+<span class="caption__date">Sep 05, 2018</span>
+</div>
+<div class="caption__content">
+<h4 class="u-a1">
+Getting Started With VR Development </h4>
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="../optimizing-interaction-on-vremen-co-our-timetracking-tool/index.html" class="c-article js-post-item">
+<div class="c-article__image">
+<figure class="o-media-wrapper o-media-wrapper--4-3 js-image-wrapper" data-animation-delay="0.2">
+<i class="o-media-wrapper__mask js-image-mask"></i>
+<picture class="">
+<img class="js-image" src="../../wp-content/uploads/2018/09/vremenco-featured_480x320_acf_croppeddc0a.jpg?x22406" alt="">
+</picture>
+</figure>
+</div>
+<div class="c-article__caption">
+<div class="caption">
+<div class="caption__header u-b6">
+<span class="caption__category">Design</span>
+<span class="caption__date">Sep 14, 2018</span>
+</div>
+<div class="caption__content">
+<h4 class="u-a1">
+Optimizing Interaction on Vremen.co: Our Timetracking Tool </h4>
+</div>
+</div>
+</div>
+</a>
+ </div>
+</div>
+</div>
+</div>
+</section>
+<div class="c-footer-wrapper js-footer" data-navigation-color="is-white">
+<footer class="c-footer c-footer--top u-clearfix">
+<div class="o-container">
+<div class="c-footer__top">
+
+<div class="footer-column footer-column--left">
+<div class="c-footer__page js-footer-page">
+<a href="../../culture/index.html" class="c-footer__page-bg js-footer-page-cta">
+<i class="js-footer-page-bg" style="background-image: url(../../wp-content/uploads/2018/09/17_800x480_acf_cropped.jpg)"></i>
+</a>
+<h4 class="u-a1" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+About </h4>
+<p class="u-b4" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Discover how we live and what we stand for </p>
+<div class="u-no-events" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<span class="c-button c-button--text c-button--small c-button--bordered js-footer-page-cta">
+<span>View About </span>
+</span>
+</div>
+</div>
+</div>
+
+<div class="footer-column footer-column--right">
+
+<div class="c-footer__page js-footer-page">
+<a href="../../work/index.html" class="c-footer__page-bg js-footer-page-cta">
+<i class="js-footer-page-bg" style="background-image: url(../../wp-content/uploads/2018/09/pvt-header_800x480_acf_cropped.jpg)"></i>
+</a>
+<h4 class="u-a1" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Work </h4>
+<p class="u-b4" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Take a look at what we've created and get inspired </p>
+<div class="u-no-events" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<span class="c-button c-button--text c-button--small c-button--bordered">
+<span>View Work </span>
+</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</footer>
+<footer class="c-footer c-footer--bottom u-clearfix">
+<div class="o-container">
+<div class="c-footer__bottom">
+<div class="footer-column footer-column--left">
+<ul class="c-footer-links u-clearfix" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<li class="c-footer-links__item">
+<a href="../../index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+ Home </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../services/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+What we do </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../culture/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+About </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Blog </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../careers/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Careers </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../work/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Our work </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../contact/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Contact </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../legal/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Legal information </span>
+</a>
+</li>
+</ul>
+</div>
+<div class="footer-column footer-column--right">
+<article class="c-footer__article" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<a class="u-b4 c-footer__gmaps" target="_blank" href="https://www.google.com/maps/place/Bornfight/@45.8145899,15.9437216,17z/data=!3m1!4b1!4m5!3m4!1s0x4765d72523db7c8f:0xeb98cddf4bbe35cc!8m2!3d45.8145899!4d15.9459103">
+Bornfight <br />
+Vukasovićeva 1,<br />
+10000 Zagreb,<br />
+Croatia </a>
+<ul class="c-contact-info">
+<li class="c-contact-info__item">
+<span class="u-b6">
+t:
+</span>
+<a class="c-button c-button--small" href="tel: +385 1 3333 710">
+<span>
++385 1 3333 710 </span>
+</a>
+</li>
+<li class="c-contact-info__item">
+<span class="u-b6">
+m:
+</span>
+<a class="c-button c-button--text c-button--bordered c-button--small" href="mailto: hello@bornfight.com">
+<span>hello@bornfight.com</span>
+</a>
+</li>
+</ul>
+</article>
+<ul class="c-footer-links" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<li class="c-footer-links__item">
+<a target="_blank" href="https://www.facebook.com/Bornfight.company/" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Facebook </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://twitter.com/Bornfight_" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Twitter </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://www.instagram.com/bornfight" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Instagram </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://www.linkedin.com/company/bornfight/" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+LinkedIn </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://dribbble.com/Bornfight" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Dribbble </span>
+</a>
+ </li>
+</ul>
+</div>
+</div>
+<div class="c-footer__bar">
+<div class="footer-column footer-column--left" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="1">
+<p class="u-b4">© Bornfight. All rights reserved 2020</p>
+</div>
+<div class="footer-column footer-column--right" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="1">
+<a href="../../privacy-policy/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>Privacy Policy</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  _nQc = '89230795';
+  _nQs = 'WordPress-Plugin';
+  _nQsv = '1.3.1';
+  _nQt = new Date().getTime();
+  (function() {
+    var no = document.createElement('script'); no.type = 'text/javascript'; no.async = true;
+    no.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'serve.albacross.com/track.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(no, s);
+  })();
+</script>
+<script type="text/javascript">
+var $buoop = {required:{e:-3,f:-3,o:-3,s:-3,c:-3},test:false,newwindow:true,style:"top",insecure:true,unsupported:true,mobile:true,shift_page_down:true,api:2020.03};
+
+function $buo_f(){
+var e = document.createElement("script");
+e.src = "http://browser-update.org/update.min.js";
+document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f, false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script><script src="../../wp-content/cache/minify/e054edc0a.js?x22406"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var restUrl = {"application":"https:\/\/www.bornfight.com\/wp-json\/api\/v1\/application\/"};
+var backendVariables = {"positions":{"full_time":{"Strategic_Partnerships":[{"name":"Strategic Partnerships Team Lead","category":"Strategic_Partnerships","type":"full_time"},{"name":"Strategic Partnerships Manager","category":"Strategic_Partnerships","type":"full_time"},{"name":"Strategic Partnerships Executive","category":"Strategic_Partnerships","type":"full_time"},{"name":"Strategic Partnerships Assistant","category":"Strategic_Partnerships","type":"full_time"},{"name":"Business Development Representative","category":"Strategic_Partnerships","type":"full_time"},{"name":"Junior Business Development Representative","category":"Strategic_Partnerships","type":"full_time"}],"Design":[{"name":"Digital Design Team Lead","category":"Design","type":"full_time"},{"name":"Interactive Art Director","category":"Design","type":"full_time"},{"name":"Senior Digital Designer","category":"Design","type":"full_time"},{"name":"Digital Designer","category":"Design","type":"full_time"},{"name":"Junior Digital Designer","category":"Design","type":"full_time"}],"Front-end_Development":[{"name":"Front-end Development Team Lead","category":"Front-end_Development","type":"full_time"},{"name":"Senior Front-end Developer","category":"Front-end_Development","type":"full_time"},{"name":"Front-end Developer","category":"Front-end_Development","type":"full_time"},{"name":"Junior Front-end Developer","category":"Front-end_Development","type":"full_time"},{"name":"WordPress Engineer","category":"Front-end_Development","type":"full_time"},{"name":"Junior WordPress Engineer","category":"Front-end_Development","type":"full_time"}],"Software_Development":[{"name":"Software Development Team Lead","category":"Software_Development","type":"full_time"},{"name":"Senior Software Developer","category":"Software_Development","type":"full_time"},{"name":"Software Developer","category":"Software_Development","type":"full_time"},{"name":"Junior Software Developer","category":"Software_Development","type":"full_time"}],"Mobile_Development":[{"name":"Android Development Team Lead","category":"Mobile_Development","type":"full_time"},{"name":"Senior Android Developer","category":"Mobile_Development","type":"full_time"},{"name":"Android Developer","category":"Mobile_Development","type":"full_time"},{"name":"Junior Android Developer","category":"Mobile_Development","type":"full_time"},{"name":"iOS Development Team Lead","category":"Mobile_Development","type":"full_time"},{"name":"Senior iOS Developer","category":"Mobile_Development","type":"full_time"},{"name":"iOS Developer","category":"Mobile_Development","type":"full_time"},{"name":"Junior iOS Developer","category":"Mobile_Development","type":"full_time"}],"Quality_Assurance":[{"name":"Senior Software Developer In Test","category":"Quality_Assurance","type":"full_time"},{"name":"Software Developer In Test","category":"Quality_Assurance","type":"full_time"},{"name":"Junior Software Developer In Test","category":"Quality_Assurance","type":"full_time"},{"name":"Senior Software Tester","category":"Quality_Assurance","type":"full_time"},{"name":"Software Tester","category":"Quality_Assurance","type":"full_time"},{"name":"Junior Software Tester","category":"Quality_Assurance","type":"full_time"}],"Project_Management":[{"name":"Project Management Team Lead","category":"Project_Management","type":"full_time"},{"name":"Senior Project Manager","category":"Project_Management","type":"full_time"},{"name":"Project Manager","category":"Project_Management","type":"full_time"},{"name":"Junior Project Manager","category":"Project_Management","type":"full_time"}],"System_Administration":[{"name":"IT Administrator","category":"System_Administration","type":"full_time"},{"name":"Junior IT Administrator","category":"System_Administration","type":"full_time"}],"Finance_&_Office_Management":[{"name":"Finance Manager","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Finance Assistant","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Accountant","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Junior Accountant","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Office Manager","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Office Assistant","category":"Finance_&_Office_Management","type":"full_time"}],"Human_Resources":[{"name":"Human Resources Manager","category":"Human_Resources","type":"full_time"},{"name":"Human Resources Specialist","category":"Human_Resources","type":"full_time"},{"name":"Human Resources Associate","category":"Human_Resources","type":"full_time"},{"name":"Human Resources Assistant","category":"Human_Resources","type":"full_time"}],"Marketing_&_PR":[{"name":"Marketing & PR Manager","category":"Marketing_&_PR","type":"full_time"},{"name":"Marketing & PR Assistant","category":"Marketing_&_PR","type":"full_time"},{"name":"Content Creator","category":"Marketing_&_PR","type":"full_time"}]},"student_job":{"Strategic_Partnerships":[{"name":"Strategic Partnerships Assistant","category":"Strategic_Partnerships","type":"student_job"}],"Design":[{"name":"Junior Digital Designer","category":"Design","type":"student_job"}],"Front-end_Development":[{"name":"Junior Front-end Developer","category":"Front-end_Development","type":"student_job"}],"Software_Development":[{"name":"Junior Software Developer","category":"Software_Development","type":"student_job"}],"Mobile_Development":[{"name":"Junior Android Developer","category":"Mobile_Development","type":"student_job"},{"name":"Junior iOS Developer","category":"Mobile_Development","type":"student_job"}],"Quality_Assurance":[{"name":"Junior Software Developer In Test","category":"Quality_Assurance","type":"student_job"},{"name":"Junior Software Tester","category":"Quality_Assurance","type":"student_job"}],"Project_Management":[{"name":"Junior Project Manager","category":"Project_Management","type":"student_job"}],"Finance_&_Office_Management":[{"name":"Finance Assistant","category":"Finance_&_Office_Management","type":"student_job"}]}}};
+/* ]]> */
+</script>
+<script src="../../wp-content/cache/minify/a9b30dc0a.js?x22406"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.bornfight.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script src="../../wp-content/cache/minify/0fef6dc0a.js?x22406"></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LffF58UAAAAAEnSqRM4ycJxYdL9hvLRI_5qXPdA&amp;ver=3.0'></script>
+<script src="../../wp-content/cache/minify/13d7ddc0a.js?x22406"></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6LffF58UAAAAAEnSqRM4ycJxYdL9hvLRI_5qXPdA',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="http://js.hs-scripts.com/7022902.js"></script>
+
+</body>
+
+<!-- Mirrored from www.bornfight.com/blog/how-to-implement-pwa-and-barba-js-into-internet-kiosks/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 May 2020 13:25:38 GMT -->
+</html>

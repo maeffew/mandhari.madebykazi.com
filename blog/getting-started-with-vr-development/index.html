@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+<html lang="en-US" class="is-locked">
+
+<!-- Mirrored from www.bornfight.com/blog/getting-started-with-vr-development/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 May 2020 13:23:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="../../xmlrpc.php">
+<title>
+        Bornfight | Blog | Getting Started With VR Development    </title>
+<link rel="apple-touch-icon" sizes="180x180" href="../../wp-content/themes/bf/static/ui/favicon/apple-touch-icondc0a.png?x22406">
+<link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/bf/static/ui/favicon/favicon-32x32dc0a.png?x22406">
+<link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/bf/static/ui/favicon/favicon-16x16dc0a.png?x22406">
+<link rel="manifest" href="../../wp-content/themes/bf/static/ui/favicon/site.html">
+<link rel="mask-icon" href="../../wp-content/themes/bf/static/ui/favicon/safari-pinned-tabdc0a.svg?x22406" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PV9LGPL');</script>
+
+
+<meta name="description" content="Virtual reality is here and it’s big, so start embracing this new wave and jump on the virtual train before it’s too late." />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Blog | Getting Started With VR Development" />
+<meta property="og:description" content="Virtual reality is here and it’s big, so jump on before it’s too late." />
+<meta property="og:url" content="https://www.bornfight.com/blog/getting-started-with-vr-development/" />
+<meta property="og:site_name" content="Bornfight" />
+<meta property="article:publisher" content="https://www.facebook.com/Bornfight.company/" />
+<meta property="article:modified_time" content="2019-03-20T08:30:18+00:00" />
+<meta property="og:image" content="https://www.bornfight.com/wp-content/uploads/2018/09/fb_share.png" />
+<meta property="og:image:width" content="2400" />
+<meta property="og:image:height" content="1260" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog | Getting Started With VR Development" />
+<meta name="twitter:description" content="Virtual reality is here and it’s big, so jump on before it’s too late." />
+<meta name="twitter:image" content="https://www.bornfight.com/wp-content/uploads/2018/09/fb_share.png" />
+<meta name="twitter:creator" content="@Bornfight_" />
+<meta name="twitter:site" content="@Bornfight_" />
+<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.bornfight.com/#website","url":"https://www.bornfight.com/","name":"Bornfight","description":"Bornfight","potentialAction":[{"@type":"SearchAction","target":"https://www.bornfight.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.bornfight.com/blog/getting-started-with-vr-development/#primaryimage","inLanguage":"en-US","url":"https://www.bornfight.com/wp-content/uploads/2018/08/approach-header-hero-size.jpg","width":1920,"height":1080},{"@type":"WebPage","@id":"https://www.bornfight.com/blog/getting-started-with-vr-development/#webpage","url":"https://www.bornfight.com/blog/getting-started-with-vr-development/","name":"Bornfight | Blog | Getting Started With VR Development","isPartOf":{"@id":"https://www.bornfight.com/#website"},"primaryImageOfPage":{"@id":"https://www.bornfight.com/blog/getting-started-with-vr-development/#primaryimage"},"datePublished":"2018-09-05T15:04:03+00:00","dateModified":"2019-03-20T08:30:18+00:00","description":"Virtual reality is here and it\u2019s big, so start embracing this new wave and jump on the virtual train before it\u2019s too late.","inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.bornfight.com/blog/getting-started-with-vr-development/"]}]}]}</script>
+
+<link rel='dns-prefetch' href='http://www.google.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="stylesheet" href="../../wp-content/cache/minify/e59d1dc0a.css?x22406" media="all" />
+<script src="../../wp-content/cache/minify/c7035dc0a.js?x22406"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cf7_dropfiles = {"url_plugin":"https:\/\/www.bornfight.com\/wp-content\/plugins\/contact-form-7-drop-files\/","ajax_url":"https:\/\/www.bornfight.com\/wp-admin\/admin-ajax.php","text_content_limit":"Error: POST Content-Length limit","text_remove":"Remove","text_abort":"Abort","text_maximum":"You can only upload a maximum of"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/contact-form-7-drop-files/frontend/js/dropfiles-cf7ec21.js?x22406&amp;ver=1588771152'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml" />
+<link rel='shortlink' href='../../index1426.html?p=941' />
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed28ff.json?url=https%3A%2F%2Fwww.bornfight.com%2Fblog%2Fgetting-started-with-vr-development%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed3835?url=https%3A%2F%2Fwww.bornfight.com%2Fblog%2Fgetting-started-with-vr-development%2F&amp;format=xml" />
+<style type="text/css">body .buorg {
+  background-color: #fff;
+  font-family: PlainLight;
+}
+#buorgul {
+    background-color: #0d0d0d !important;
+    color: #fff!important;
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-weight: 700 !important;
+    font-family: PlainBold;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    border-radius: 0 !important;
+}
+#buorgig {
+    background-color: #fff !important;
+    border: 1px solid #0d0d0d;
+    color: #0d0d0d!important;
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-weight: 700 !important;
+    font-family: PlainBold;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 0 !important;
+}
+.buorg-mainmsg {
+    letter-spacing: .2px;
+    font-size: .7rem;
+    line-height: 1.5;
+}
+.buorg-moremsg {
+    letter-spacing: .2px;
+    font-size: .7rem;
+    line-height: 1.5;
+}
+</style></head>
+<body data-rsssl=1 class="blog-template-default single single-blog postid-941 is-desktop">
+<script>
+    const apiUrl = '../../wp-json/api/v1.json';
+
+    </script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV9LGPL"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="c-main-loader js-main-loader" style="background-color: #0d0d0d;">
+<div class="c-main-loader__logo js-main-loader-logo">
+<span class="js-main-loader-logo">
+<img src="../../wp-content/themes/bf/static/ui/bf-logo-lightdc0a.svg?x22406" alt="Bornfight">
+</span>
+</div>
+<div class="c-main-loader__container js-main-loader-container">
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/09/01-big_1440x980_acf_cropped.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/09-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/03-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/04-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/05-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/06-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/07-big.jpg);"></i>
+<i class="c-main-loader__image js-main-loader-image" style="background-image: url(../../wp-content/uploads/2018/08/08-big.jpg);"></i>
+</div>
+<i class="c-main-loader__curtain js-main-loader-curtain"></i>
+</div>
+<div class="c-page-transitions js-page-transitions"></div>
+<div class="c-work-transitions js-work-transition-layer"></div>
+<div class="c-cookie-bar js-cookie-bar">
+<div class="c-cookie-bar__inner">
+<div class="c-cookie-bar__left">
+<p class="u-b6">
+We use cookies to optimize your user experience. We also share information about your use of our site with our social media, advertising and analytics partners. By continuing to use our site you agree to using cookies in accordance with our <a href="../../privacy-policy/index.html" class="c-link">Privacy Policy</a>. </p>
+</div>
+<div class="c-cookie-bar__right">
+<span class="c-button c-button--primary js-cookie-accept" data-name="bornfight.cookie.acceptance" data-value="1">
+<span>
+Accept </span>
+</span>
+</div>
+</div>
+</div>
+<div class="c-navigation js-navigation">
+<div class="c-navigation__menu js-menu">
+<div class="c-navigation__logo js-navigation-logo">
+<a href="../../index.html" class="js-navigation-link" data-item="2">
+<img src="../../wp-content/themes/bf/static/ui/bf-logo-darkdc0a.svg?x22406" alt="Bornfight">
+</a>
+</div>
+<div class="c-navigation__menu-left">
+<div class="navigation-links-wrapper">
+<div class="navigation-links-wrapper__inner">
+<ul class="navigation-links navigation-links--top">
+<li class="navigation-links__item js-navigation-item">
+<a data-item="8" href="../../services/index.html" class="c-button c-button--text c-button--large js-navigation-link">
+<span>
+What we do </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="work" href="../../work/index.html" class="c-button c-button--text c-button--large js-navigation-link">
+<span>
+Our work </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="blog" href="../index.html" class="c-button c-button--text c-button--large js-navigation-link">
+<span>
+Blog </span>
+</a>
+</li>
+</ul>
+<ul class="navigation-links navigation-links--bottom">
+<li class="navigation-links__item js-navigation-item">
+<a data-item="2" href="../../index.html" class="c-button c-button--text js-navigation-link js-home ">
+<span>
+Home </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="413" href="../../careers/index.html" class="c-button c-button--text js-navigation-link js-careers ">
+<span>
+Careers </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="15" href="../../culture/index.html" class="c-button c-button--text js-navigation-link js-about ">
+<span>
+About </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="resources" href="../../resources/index.html" class="c-button c-button--text js-navigation-link js-resources ">
+<span>
+Resources </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="3833" href="../../newsletter/index.html" class="c-button c-button--text js-navigation-link js-subscribe-to-our-newsletter ">
+<span>
+Subscribe to our newsletter </span>
+</a>
+</li>
+<li class="navigation-links__item js-navigation-item">
+<a data-item="28" href="../../contact/index.html" class="c-button c-button--text js-navigation-link js-start-a-project                                 c-button--icon
+                                ">
+<span>
+Start a project <svg class="icon icon-arrow-right">
+<use xlink:href="../../wp-content/themes/bf/static/icomoon/symbol-defsdc0a.svg?x22406#icon-arrow-right"></use>
+</svg>
+</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<ul class="c-contact-info c-contact-info--small">
+<li class="c-contact-info__item js-navigation-contact-info">
+<span class="u-b6">
+t:
+</span>
+<a class="c-button c-button--text c-button--small" href="tel:+385 1 3333 710">
+<span>
++385 1 3333 710 </span>
+</a>
+</li>
+<li class="c-contact-info__item js-navigation-contact-info">
+<span class="u-b6">
+m:
+</span>
+<a class="c-button c-button--text c-button--bordered c-button--small" href="mailto:hello@bornfight.com">
+<span>hello@bornfight.com</span>
+</a>
+</li>
+</ul>
+</div>
+<i class="c-menu-bg__cover js-menu-bg-cover"></i>
+<div class="c-navigation__menu-right">
+<div class="c-menu-bg js-menu-bg">
+ <div class="c-menu-bg__canvas js-menu-bg-list">
+<div class="canvas js-menu-bg-canvas" data-displacement-map="https://www.bornfight.com/wp-content/themes/bf/static/ui/rock.png"></div>
+</div>
+<ul class="c-menu-bg__list js-menu-bg-list">
+<li class="c-menu-bg__item">
+<i class="c-menu-bg__image js-menu-bg-image" data-menu-bg="https://www.bornfight.com/wp-content/uploads/2018/08/01.jpg" style="background-image: url(../../wp-content/uploads/2018/08/01.jpg);"></i>
+</li>
+<li class="c-menu-bg__item">
+<i class="c-menu-bg__image js-menu-bg-image" data-menu-bg="https://www.bornfight.com/wp-content/uploads/2018/08/02.jpg" style="background-image: url(../../wp-content/uploads/2018/08/02.jpg);"></i>
+</li>
+<li class="c-menu-bg__item">
+<i class="c-menu-bg__image js-menu-bg-image" data-menu-bg="https://www.bornfight.com/wp-content/uploads/2018/08/03-1.jpg" style="background-image: url(../../wp-content/uploads/2018/08/03-1.jpg);"></i>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="barba-wrapper">
+<div class="barba-container js-init-color" data-menu-item="blog" data-init-color="#0d0d0d" data-namespace="blog-single">
+<div class="c-clip-element c-clip-element--logo js-clip-element ">
+<div class="c-logo c-logo--navigation js-menu-stage">
+<a href="../../index.html" class="js-home js-exit-enter-el" data-item="2">
+<i class="bornfight bornfight--dark">
+<img src="../../wp-content/themes/bf/static/ui/BF-sign-darkdc0a.svg?x22406" alt="">
+</i>
+<i class="bornfight bornfight--light">
+<img src="../../wp-content/themes/bf/static/ui/BF-sign-lightdc0a.svg?x22406" alt="">
+</i>
+</a>
+</div>
+</div>
+<div class="c-clip-element c-clip-element--menu-trigger js-clip-element">
+<div class="c-menu-trigger js-menu-trigger js-exit-enter-el">
+<i class="c-menu-trigger__bar c-menu-trigger__bar--top"></i>
+<i class="c-menu-trigger__bar c-menu-trigger__bar--middle"></i>
+<i class="c-menu-trigger__bar c-menu-trigger__bar--bottom"></i>
+</div>
+</div>
+<div class="c-clip-element c-clip-element--email js-clip-element">
+<div class="c-navigation-email js-menu-stage">
+<a class="u-b6 js-exit-enter-el" href="mailto:hello@bornfight.com">hello@bornfight.com</a>
+</div>
+</div>
+<div class="c-secondary-navigation js-clip-element">
+<div class="c-secondary-navigation__left">
+<ul class="c-secondary-navigation-links">
+<li class="c-secondary-navigation-links__item js-menu-stage">
+<a href="../index.html" class="c-button c-button--text c-button--bordered c-button--icon c-button--small">
+<span>
+View all posts </span>
+</a>
+</li>
+</ul>
+</div>
+<div class="c-secondary-navigation__right js-menu-stage">
+<a href="../../contact/index.html" class="c-button c-button--primary js-secondary-nav-cta">
+ <span>
+Start a project </span>
+</a>
+</div>
+</div>
+<div class="o-page-wrapper o-page-wrapper--blog-single js-page-wrapper" id="page-wrapper">
+<header class="c-header c-header--blog-single u-clearfix">
+<div class="o-container">
+<h1 class="u-a5 js-animation-stage-title">
+Getting Started With VR Development </h1>
+<div class="c-details-info c-details-info--has-author-title u-clearfix">
+<div class="c-details-info__item u-b6 js-animation-stage-element">
+<strong>
+Author
+</strong>
+<span>
+Tomislav Smrečki </span>
+<span>
+</span>
+</div>
+<div class="c-details-info__item u-b6 js-animation-stage-element">
+<strong>
+Category
+</strong>
+<span>
+Development </span>
+</div>
+<div class="c-details-info__item u-b6 js-animation-stage-element">
+<strong>
+Date
+</strong>
+<span>Sep 05, 2018</span>
+</div>
+<span class="c-details-info__reading-time u-b6 js-animation-stage-element">
+<span class="span-reading-time rt-reading-time"><span class="rt-label rt-prefix"></span> <span class="rt-time"> 7</span> <span class="rt-label rt-postfix">min read</span></span> </span>
+</div>
+
+<div class="c-blog-image js-animation-stage-element">
+<figure class="o-media-wrapper o-media-wrapper--16-9">
+<picture class="">
+<source media="(min-width: 720px)" srcset="" data-srcset="https://www.bornfight.com/wp-content/uploads/2018/08/vr.jpg">
+<img class="lazyload" src="#" data-src="https://www.bornfight.com/wp-content/uploads/2018/08/vr-mobile.jpg?x22406" alt="">
+</picture>
+</figure>
+<p class="o-media-caption">
+</p>
+</div>
+
+</div>
+</header>
+<section class="o-section o-section--blog-single-content u-clearfix">
+<div class="o-container">
+<div class="c-editor-content">
+
+<h3>Virtual reality is here and it’s big. Your clients will want to have their own VR projects, so start embracing this new wave and jump on the virtual train before it’s too late. We wrote some tips for you on how to get started with VR development.</h3>
+<h4>First, Let’s Have an Overview of VR Hardware.</h4>
+<p>Oculus Rift, HTC Vive and PlayStation VR are the most advanced consumer VR sets at the moment, but they are also expensive. Most of the time, your clients will want to have their apps available to the broader audience, so building apps for those platforms might not be the best solution.</p>
+<p>Cheaper solutions are VR glasses like Google Cardboard or Samsung GearVR. They offer a similar experience, but they’re powered by smartphones (which everyone has in their pockets nowadays). The idea is – you just take your smartphone, stick it into one of those headsets and you’re ready for some VR action.</p>
+<p>One downside of the Google Cardboard and similar headsets are poor control possibilities. With Oculus, Vive and PlayStation VR, you get hand controllers which will map your hand movements into the virtual world, so you can actually touch, grab and hold objects in the virtual world. Google Cardboard only has one magnetic or conductible button, which serves as a trigger within the app/game. We will describe later how you can interact in the virtual world with such a limited set of controls. On Google I/O 2016, Google announced a new headset that will be coming this fall and feature a hand controller, so we are looking forward to it.</p>
+<p><img class="aligncenter size-full wp-image-947" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/s-blog-1.jpg" alt="" width="1024" height="474" srcset="https://www.bornfight.com/wp-content/uploads/2018/08/s-blog-1.jpg 1024w, https://www.bornfight.com/wp-content/uploads/2018/08/s-blog-1-300x139.jpg 300w, https://www.bornfight.com/wp-content/uploads/2018/08/s-blog-1-768x356.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<h4>What Will You Need to Build VR Apps/Games for Smartphones?</h4>
+<h5>Let’s Have a Look at the Development Side of the Story</h5>
+<p>Just a quick market research before we start. Google Cardboard and similar glasses can be bought for a few bucks on eBay or similar stores. Samsung’s Gear VR is a bit more expensive, so the cardboard option will surely be the more approachable option. To make the development of the VR app/game as easy as possible, we used the Cardboard SDK, which is now available as a part of <a href="https://developers.google.com/vr/" target="_blank" rel="noopener">Google VR SDK</a>. It’s available for both native Android and iOS platforms, but more importantly, it is also available for Unity. The cool thing about Unity is that, when you make a project using this engine, you can build it for various platforms, Android and iOS being one of them. Your clients will appreciate not having to pay double for two platforms, and you will have to do less work for the same result. The downside is that if you’re not familiar with Unity engine and C#/Javascript programming language, you’ll have to do some learning and training.</p>
+<p>Unity Editor allows you to model your 3D world as you like and C#/Javascript scripts allow you to define game logic, object behaviour, animations, networking, etc.</p>
+<p>Google VR SDK for Unity is a set of C# scripts that have rules and behaviours for proper VR rendering. The most important prefab asset in the GoogleVR SDK is the GvrMain. It consists of a Head and Stereo Render objects.</p>
+<h5>Go Stereoscopic</h5>
+<p><strong>Head</strong> holds the <strong>MainCamera</strong> which will render your scene in a stereoscopic manner – your smartphone screen is divided into two smaller screens, one for each eye. That way you can be sure the SDK will provide the best stereoscopic experience possible for your cardboard glasses.</p>
+<p>Also, it carries the <strong>PhysicsRaycaster</strong> script which will allow you to trigger actions within the virtual world just by looking at objects. Of course, to know where your center of the view is, you can add the <strong>GvrReticle</strong> prefab with <strong>GvrReticle</strong> script. It will add a small circle on the screen, so you can point at stuff and activate them with the help of the <strong>EventSystem</strong> which we’ll describe later.</p>
+<h5>Spatialize Your Audio</h5>
+<p>Besides that, <strong>MainCamera</strong> carries the<strong> Gvr Audio Listener </strong>which is used for audio spatialization. If you wear headphones, sound will be played in a way that approximates the position of the source in the scene. Your objects need to carry<strong> Gvr Audio Source </strong>on them to work properly with the<strong> Gvr Audio Listener</strong>. So if there’s an object to your left in the virtual world, you’ll hear it with greater intensity on the left side of the headphones, and less on the right side.<br />
+Important note – Unity will not enable the<strong> GVR Audio Spatializer </strong>by default in the settings, so you’ll have to turn it on by yourself in the<strong> Edit-&gt;ProjectSettings-&gt;Audio </strong>menu and switching the Spatializer Plugin from<strong> None </strong>to<strong> GVR Audio Spatializer</strong>.<br />
+Have a look at the example scene from our VR maze game.</p>
+<p><img class="aligncenter size-full wp-image-948" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/s-post-2.png" alt="" width="1024" height="413" srcset="https://www.bornfight.com/wp-content/uploads/2018/08/s-post-2.png 1024w, https://www.bornfight.com/wp-content/uploads/2018/08/s-post-2-300x121.png 300w, https://www.bornfight.com/wp-content/uploads/2018/08/s-post-2-768x310.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>This scene has the aforementioned<strong> GvrMain </strong>prefab which holds the camera, two canvases (one for highscores and one for the game menu), a floor (which is a plain object), one light source and Degordian logo.</p>
+<p>To model your scene, you can just drag&amp;drop those items from your assets folder. You can import assets from other modeling tools (Blender, SketchUp) or you can find them on the Unity Asset Store.</p>
+<h5>What About Interactions?</h5>
+<p>This scene is very minimalistic, and you can’t do much with it, for now, so let’s add some interaction. As we mentioned before,<strong> GvrMain </strong>holds a<strong> PhysicsRaycaster </strong>on its<strong> MainCamera </strong>object which, well, casts rays that can hit objects. When a ray hits an object,<strong> GvrReticle </strong>(which is a small circle mentioned above) will indicate that we are looking at something interactable.</p>
+<p>So, how can we make something interactable? If you look at the previous screenshot, you will notice an EventSystem object in the list on the left. This object contains<strong> EventSystem</strong>, <strong>GazeInputModule </strong>and<strong> TouchInputModule </strong>scripts. Those scripts are available in the SDK, and they will help us achieve some interaction in the scene. The final thing on our way to making something interactable is adding an<strong> EventTrigger </strong>script to the object itself.</p>
+<p>In this scene, the Degordian logo is interactable. When you look towards it, you can trigger an event on it with a magnetic or conductible button on your cardboard glasses. That’s a cute Easter egg in the menu scene – you can point and shoot at the Degordian logo and it will teleport around you as you shoot at it. So what does an<strong> EventTrigger </strong>script have to do with it?</p>
+<p><img class="aligncenter size-full wp-image-946" src="https://deghq.com/wordpress/bornfight/wp-content/uploads/2018/08/s-post-1.png" alt="" width="1024" height="465" srcset="https://www.bornfight.com/wp-content/uploads/2018/08/s-post-1.png 1024w, https://www.bornfight.com/wp-content/uploads/2018/08/s-post-1-300x136.png 300w, https://www.bornfight.com/wp-content/uploads/2018/08/s-post-1-768x349.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>We added this<strong> EventTrigger </strong>script to the Degordian logo object. You can define which actions will be invoked when certain events occur.</p>
+<p>Two triggers are<strong> Pointer Enter </strong>and<strong> Pointer Exit</strong>. These will trigger when you start and stop looking at the object. When those events occur, you can define which actions will be invoked. In this example, a method<strong> SetGazedAt </strong>from the<strong> Teleport </strong>script will be called with the given parameter (true or false).</p>
+<p>The third event is the<strong> Pointer Click</strong>. This will occur when you’re actually looking at the object and trigger a button on your cardboard glasses. When this happens, a<strong> TeleportRandomly </strong>method is called which teleports the object to a random place in the scene.</p>
+<p>It’s that simple, now you have an interactable object. There are some more events available to be specified – you can link them to any method you like and do something accordingly.</p>
+<p>Those were some simple examples of scene setup in Unity Editor, so let’s now take a look at scripts.</p>
+<h5>Implement Your Logic</h5>
+<p>Scripts are written in C# or Javascript programming language. If you’ll want to access object’s properties and change them in the script, you will most likely use and extend the MonoBehaviour class. It will provide you with some methods you can override and make use of. You will have a<strong> Start() </strong>and<strong> Awake() </strong>methods, which are used for initialization.</p>
+<p>Let’s look at the<strong> Teleport </strong>class, which is actually a part of Google VR SDK example.</p>
+<pre>public class Teleport : MonoBehaviour {
+private Vector3 startingPosition;
+
+void Start() {
+startingPosition = transform.localPosition;
+SetGazedAt(false);
+}
+}</pre>
+<p>First, there is some initialization. We declare the starting position of an object. Then there’s a<strong> SetGazedAt </strong>method which will get the Renderer component of the object and change its color according to the <em>gazedAt</em> value. You can retrieve any of the object’s component by calling the<strong> GetComponent&lt;{ComponentName}&gt;() </strong>and use its properties.</p>
+<pre>public void SetGazedAt(bool gazedAt) {
+GetComponent&lt;Renderer&gt;().material.color = gazedAt ? Color.green : Color.red;
+}</pre>
+<p>Also, there are<strong> Update </strong>and<strong> LateUpdate </strong>methods available.<strong> Update </strong>is called on every single rendered frame and you can use it for some continuous work, like changing the position of the object or checking for some input events.</p>
+<p>For example, if you put this in your<strong> Update </strong>method, the object itself will start moving in the “forward” direction. This code is actually used in the game for moving the camera forward and simulation of walking through the maze.</p>
+<pre>void Update(){
+GetComponent&lt;Rigidbody&gt; ().velocity = transform.forward * 2.0f;
+}</pre>
+<p><strong>Rigidbody </strong>is a component that describes physical properties of the object. That means you can give it velocity and it will start moving.</p>
+<p><strong>LateUpdate </strong>can be used for trigger checking. Here are two examples of its usage.</p>
+<pre>void LateUpdate(){
+if (GvrViewer.Instance.BackButtonPressed) {
+Application.Quit ();
+}
+
+if (GvrViewer.Instance.Triggered) {
+SomeAction ();
+}
+}</pre>
+<p>As you can see, Google VR SDK offers<strong> BackButtonPressed </strong>flag which will be set to true if the user pressed a back button on their phone. Also, there is<strong> Triggered </strong>flag which is set if the user triggers a magnetic or conductible button on their cardboard glasses. The main idea for interactions is – look towards an interactable object and trigger some action with the magnetic or conductible button on your cardboard glasses.</p>
+<p>That’s about it for our Unity VR 101 blog post. Be sure to keep up with our blog for new mini-series in which we’ll describe specific parts and details of Unity VR development.</p>
+<p>Be sure to check out our Curious Maze <a href="https://play.google.com/store/apps/details?id=com.degordian.mazevr.cardboard" target="_blank" rel="noopener">(Android</a> and <a href="https://itunes.apple.com/us/app/curious-maze-vr/id1112441587?mt=8" target="_blank" rel="noopener">iOS)</a> and see how we made use of the Google VR SDK to build a cute (as well as scary) adventure game.</p>
+<p>__________<br />
+We’re available for partnerships and open for new projects. <a href="../../contact/index.html" target="_blank" rel="noopener">If you have an idea you&#8217;d like to discuss, share it with our team!</a></p>
+</div>
+</div>
+</section>
+<script>
+        let blogNewsletterForm = '3213';
+    </script>
+<section class="o-section o-section--blog-single-newsletter u-clearfix">
+<div class="o-container">
+<div class="c-blog-newsletter">
+<div class="c-blog-newsletter__form-wrapper">
+<p class="u-a2 c-blog-newsletter__title">
+Subscribe to our newsletter </p>
+<div class="u-b0 c-blog-newsletter__content">
+<p>Subscribe now and get our top news once a month.</p>
+<p>100% development, design & strategy.</p>
+<p>100% spam-free.</p>
+</div>
+<div class="c-blog-newsletter__form js-form" data-form-id="11">
+<div role="form" class="wpcf7" id="wpcf7-f3213-p941-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="https://www.bornfight.com/blog/getting-started-with-vr-development/#wpcf7-f3213-p941-o1" method="post" class="wpcf7-form mailchimp-ext-0.5.18" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="3213" />
+<input type="hidden" name="_wpcf7_version" value="5.1.7" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f3213-p941-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="941" />
+<input type="hidden" name="g-recaptcha-response" value="" />
+</div>
+<div class="c-form">
+<div class="c-form__row c-form__row--input">
+<span class="c-fieldset js-form-fieldset wpcf7-form-control-wrap your-email">
+<div class="c-fieldset__field-wrapper">
+<label for="your-email" class="c-label">
+Enter your email address </label>
+<input id="your-email" name="your-email" class="c-input js-form-input wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-email" type="email" value="">
+</div>
+</span>
+<button type="submit" class="c-button c-button--block c-button--secondary wpcf7-submit">
+<span>Subscribe</span>
+</button>
+</div>
+<div class="c-form__row">
+<span class="c-fieldset wpcf7-form-control-wrap agree-pp">
+<div class="c-checkbox">
+<input type="checkbox" class="wpcf7-form-control c-checkbox__input js-form-agree-checkbox" id="agree-pp" name="agree-pp" />
+<label class="c-checkbox__label" for="agree-pp">
+I agree to the Terms of Service and Privacy Policy </label>
+</div>
+</span>
+</div>
+<div class="c-form__row">
+<span class="c-fieldset wpcf7-form-control-wrap agree-newsletter">
+<div class="c-checkbox">
+<input type="checkbox" class="wpcf7-form-control c-checkbox__input js-form-agree-checkbox" id="agree-newsletter" name="agree-newsletter" />
+<label class="c-checkbox__label" for="agree-newsletter">
+I want to receive Bornfight newsletters on this e-mail </label>
+</div>
+</span>
+</div>
+</div><div class="wpcf7-response-output wpcf7-display-none"></div><p style="display: none !important"><span class="wpcf7-form-control-wrap referer-page"><input type="hidden" name="referer-page" value="https://www.bornfight.com/blog/android-instant-apps-101/" class="wpcf7-form-control wpcf7-text referer-page" aria-invalid="false"></span></p>
+<input type="hidden" value="0" id="cf7-droptype"></form></div> </div>
+</div>
+<div class="c-blog-newsletter__thank-you js-form-thank-you">
+<p class="u-a2">
+You're now a part of our club! </p>
+<p class="u-b0">
+We got your e-mail address and you'll get our next newsletter! </p>
+</div>
+</div>
+</div>
+</section>
+<section class="o-section o-section--related-content u-clearfix">
+<div class="o-container">
+<div class="c-related-content">
+<div class="c-related-content__top">
+<h3 class="u-a6" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-1.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Related posts </h3>
+<div class="c-related-content__link-wrapper" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "delay":"0.1", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<a href="../index.html" class="c-button c-button--text c-button--bordered">
+<span>
+Read more posts </span>
+</a>
+</div>
+</div>
+<div class="c-related-content__bottom">
+<div class="c-article-list c-article-list--2">
+
+<a href="../android-instant-apps-101/index.html" class="c-article js-post-item">
+<div class="c-article__image">
+<figure class="o-media-wrapper o-media-wrapper--4-3 js-image-wrapper" data-animation-delay="0">
+<i class="o-media-wrapper__mask js-image-mask"></i>
+<picture class="">
+<img class="js-image" src="../../wp-content/uploads/2018/09/aqua-featured_480x320_acf_croppeddc0a.jpg?x22406" alt="">
+</picture>
+</figure>
+</div>
+<div class="c-article__caption">
+<div class="caption">
+<div class="caption__header u-b6">
+<span class="caption__category">Development</span>
+<span class="caption__date">Aug 29, 2018</span>
+</div>
+<div class="caption__content">
+<h4 class="u-a1">
+Android Instant Apps 101 </h4>
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="../refreshing-your-mobile-application-for-ios-11/index.html" class="c-article js-post-item">
+<div class="c-article__image">
+<figure class="o-media-wrapper o-media-wrapper--4-3 js-image-wrapper" data-animation-delay="0.2">
+<i class="o-media-wrapper__mask js-image-mask"></i>
+<picture class="">
+<img class="js-image" src="../../wp-content/uploads/2018/08/approach-testing-02-1_1050x590_acf_cropped-1_480x320_acf_croppeddc0a.jpg?x22406" alt="">
+</picture>
+</figure>
+</div>
+<div class="c-article__caption">
+<div class="caption">
+<div class="caption__header u-b6">
+<span class="caption__category">Development</span>
+<span class="caption__date">Sep 17, 2018</span>
+</div>
+<div class="caption__content">
+<h4 class="u-a1">
+Refreshing Your Mobile Application for iOS 11 </h4>
+</div>
+</div>
+</div>
+</a>
+ </div>
+</div>
+</div>
+</div>
+</section>
+<div class="c-footer-wrapper js-footer" data-navigation-color="is-white">
+<footer class="c-footer c-footer--top u-clearfix">
+<div class="o-container">
+<div class="c-footer__top">
+
+<div class="footer-column footer-column--left">
+<div class="c-footer__page js-footer-page">
+<a href="../../culture/index.html" class="c-footer__page-bg js-footer-page-cta">
+<i class="js-footer-page-bg" style="background-image: url(../../wp-content/uploads/2018/09/17_800x480_acf_cropped.jpg)"></i>
+ </a>
+<h4 class="u-a1" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+About </h4>
+<p class="u-b4" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Discover how we live and what we stand for </p>
+<div class="u-no-events" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<span class="c-button c-button--text c-button--small c-button--bordered js-footer-page-cta">
+<span>View About </span>
+</span>
+</div>
+</div>
+</div>
+
+<div class="footer-column footer-column--right">
+
+<div class="c-footer__page js-footer-page">
+<a href="../../work/index.html" class="c-footer__page-bg js-footer-page-cta">
+<i class="js-footer-page-bg" style="background-image: url(../../wp-content/uploads/2018/09/pvt-header_800x480_acf_cropped.jpg)"></i>
+</a>
+<h4 class="u-a1" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Work </h4>
+<p class="u-b4" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+Take a look at what we've created and get inspired </p>
+<div class="u-no-events" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<span class="c-button c-button--text c-button--small c-button--bordered">
+<span>View Work </span>
+</span>
+</div>
+ </div>
+</div>
+
+</div>
+</div>
+</footer>
+<footer class="c-footer c-footer--bottom u-clearfix">
+<div class="o-container">
+<div class="c-footer__bottom">
+<div class="footer-column footer-column--left">
+<ul class="c-footer-links u-clearfix" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<li class="c-footer-links__item">
+<a href="../../index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Home </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../services/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+What we do </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../culture/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+About </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Blog </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../careers/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Careers </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../work/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Our work </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../contact/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Contact </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a href="../../legal/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Legal information </span>
+</a>
+</li>
+</ul>
+</div>
+<div class="footer-column footer-column--right">
+<article class="c-footer__article" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<a class="u-b4 c-footer__gmaps" target="_blank" href="https://www.google.com/maps/place/Bornfight/@45.8145899,15.9437216,17z/data=!3m1!4b1!4m5!3m4!1s0x4765d72523db7c8f:0xeb98cddf4bbe35cc!8m2!3d45.8145899!4d15.9459103">
+Bornfight <br />
+Vukasovićeva 1,<br />
+10000 Zagreb,<br />
+Croatia </a>
+<ul class="c-contact-info">
+<li class="c-contact-info__item">
+<span class="u-b6">
+t:
+</span>
+<a class="c-button c-button--small" href="tel: +385 1 3333 710">
+<span>
++385 1 3333 710 </span>
+</a>
+</li>
+<li class="c-contact-info__item">
+<span class="u-b6">
+m:
+</span>
+<a class="c-button c-button--text c-button--bordered c-button--small" href="mailto: hello@bornfight.com">
+<span>hello@bornfight.com</span>
+</a>
+</li>
+</ul>
+</article>
+<ul class="c-footer-links" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="0.85">
+<li class="c-footer-links__item">
+<a target="_blank" href="https://www.facebook.com/Bornfight.company/" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Facebook </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://twitter.com/Bornfight_" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Twitter </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://www.instagram.com/bornfight" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Instagram </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://www.linkedin.com/company/bornfight/" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+LinkedIn </span>
+</a>
+</li>
+<li class="c-footer-links__item">
+<a target="_blank" href="https://dribbble.com/Bornfight" class="c-button c-button--text c-button--small c-button--bordered">
+<span>
+Dribbble </span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="c-footer__bar">
+<div class="footer-column footer-column--left" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="1">
+<p class="u-b4">© Bornfight. All rights reserved 2020</p>
+</div>
+<div class="footer-column footer-column--right" data-animation-set='{"opacity":"0", "y":"50%", "skewY":"-2.5deg"}' data-animation='{"opacity":"1", "y":"0%", "skewY":"0deg", "ease":"Expo.easeOut"}' data-animation-duration="1.2" data-animation-trigger="1">
+<a href="../../privacy-policy/index.html" class="c-button c-button--text c-button--small c-button--bordered">
+<span>Privacy Policy</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  _nQc = '89230795';
+  _nQs = 'WordPress-Plugin';
+  _nQsv = '1.3.1';
+  _nQt = new Date().getTime();
+  (function() {
+    var no = document.createElement('script'); no.type = 'text/javascript'; no.async = true;
+    no.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'serve.albacross.com/track.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(no, s);
+  })();
+</script>
+<script type="text/javascript">
+var $buoop = {required:{e:-3,f:-3,o:-3,s:-3,c:-3},test:false,newwindow:true,style:"top",insecure:true,unsupported:true,mobile:true,shift_page_down:true,api:2020.03};
+
+function $buo_f(){
+var e = document.createElement("script");
+e.src = "http://browser-update.org/update.min.js";
+document.body.appendChild(e);
+};
+try {document.addEventListener("DOMContentLoaded", $buo_f, false)}
+catch(e){window.attachEvent("onload", $buo_f)}
+</script><script src="../../wp-content/cache/minify/e054edc0a.js?x22406"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var restUrl = {"application":"https:\/\/www.bornfight.com\/wp-json\/api\/v1\/application\/"};
+var backendVariables = {"positions":{"full_time":{"Strategic_Partnerships":[{"name":"Strategic Partnerships Team Lead","category":"Strategic_Partnerships","type":"full_time"},{"name":"Strategic Partnerships Manager","category":"Strategic_Partnerships","type":"full_time"},{"name":"Strategic Partnerships Executive","category":"Strategic_Partnerships","type":"full_time"},{"name":"Strategic Partnerships Assistant","category":"Strategic_Partnerships","type":"full_time"},{"name":"Business Development Representative","category":"Strategic_Partnerships","type":"full_time"},{"name":"Junior Business Development Representative","category":"Strategic_Partnerships","type":"full_time"}],"Design":[{"name":"Digital Design Team Lead","category":"Design","type":"full_time"},{"name":"Interactive Art Director","category":"Design","type":"full_time"},{"name":"Senior Digital Designer","category":"Design","type":"full_time"},{"name":"Digital Designer","category":"Design","type":"full_time"},{"name":"Junior Digital Designer","category":"Design","type":"full_time"}],"Front-end_Development":[{"name":"Front-end Development Team Lead","category":"Front-end_Development","type":"full_time"},{"name":"Senior Front-end Developer","category":"Front-end_Development","type":"full_time"},{"name":"Front-end Developer","category":"Front-end_Development","type":"full_time"},{"name":"Junior Front-end Developer","category":"Front-end_Development","type":"full_time"},{"name":"WordPress Engineer","category":"Front-end_Development","type":"full_time"},{"name":"Junior WordPress Engineer","category":"Front-end_Development","type":"full_time"}],"Software_Development":[{"name":"Software Development Team Lead","category":"Software_Development","type":"full_time"},{"name":"Senior Software Developer","category":"Software_Development","type":"full_time"},{"name":"Software Developer","category":"Software_Development","type":"full_time"},{"name":"Junior Software Developer","category":"Software_Development","type":"full_time"}],"Mobile_Development":[{"name":"Android Development Team Lead","category":"Mobile_Development","type":"full_time"},{"name":"Senior Android Developer","category":"Mobile_Development","type":"full_time"},{"name":"Android Developer","category":"Mobile_Development","type":"full_time"},{"name":"Junior Android Developer","category":"Mobile_Development","type":"full_time"},{"name":"iOS Development Team Lead","category":"Mobile_Development","type":"full_time"},{"name":"Senior iOS Developer","category":"Mobile_Development","type":"full_time"},{"name":"iOS Developer","category":"Mobile_Development","type":"full_time"},{"name":"Junior iOS Developer","category":"Mobile_Development","type":"full_time"}],"Quality_Assurance":[{"name":"Senior Software Developer In Test","category":"Quality_Assurance","type":"full_time"},{"name":"Software Developer In Test","category":"Quality_Assurance","type":"full_time"},{"name":"Junior Software Developer In Test","category":"Quality_Assurance","type":"full_time"},{"name":"Senior Software Tester","category":"Quality_Assurance","type":"full_time"},{"name":"Software Tester","category":"Quality_Assurance","type":"full_time"},{"name":"Junior Software Tester","category":"Quality_Assurance","type":"full_time"}],"Project_Management":[{"name":"Project Management Team Lead","category":"Project_Management","type":"full_time"},{"name":"Senior Project Manager","category":"Project_Management","type":"full_time"},{"name":"Project Manager","category":"Project_Management","type":"full_time"},{"name":"Junior Project Manager","category":"Project_Management","type":"full_time"}],"System_Administration":[{"name":"IT Administrator","category":"System_Administration","type":"full_time"},{"name":"Junior IT Administrator","category":"System_Administration","type":"full_time"}],"Finance_&_Office_Management":[{"name":"Finance Manager","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Finance Assistant","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Accountant","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Junior Accountant","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Office Manager","category":"Finance_&_Office_Management","type":"full_time"},{"name":"Office Assistant","category":"Finance_&_Office_Management","type":"full_time"}],"Human_Resources":[{"name":"Human Resources Manager","category":"Human_Resources","type":"full_time"},{"name":"Human Resources Specialist","category":"Human_Resources","type":"full_time"},{"name":"Human Resources Associate","category":"Human_Resources","type":"full_time"},{"name":"Human Resources Assistant","category":"Human_Resources","type":"full_time"}],"Marketing_&_PR":[{"name":"Marketing & PR Manager","category":"Marketing_&_PR","type":"full_time"},{"name":"Marketing & PR Assistant","category":"Marketing_&_PR","type":"full_time"},{"name":"Content Creator","category":"Marketing_&_PR","type":"full_time"}]},"student_job":{"Strategic_Partnerships":[{"name":"Strategic Partnerships Assistant","category":"Strategic_Partnerships","type":"student_job"}],"Design":[{"name":"Junior Digital Designer","category":"Design","type":"student_job"}],"Front-end_Development":[{"name":"Junior Front-end Developer","category":"Front-end_Development","type":"student_job"}],"Software_Development":[{"name":"Junior Software Developer","category":"Software_Development","type":"student_job"}],"Mobile_Development":[{"name":"Junior Android Developer","category":"Mobile_Development","type":"student_job"},{"name":"Junior iOS Developer","category":"Mobile_Development","type":"student_job"}],"Quality_Assurance":[{"name":"Junior Software Developer In Test","category":"Quality_Assurance","type":"student_job"},{"name":"Junior Software Tester","category":"Quality_Assurance","type":"student_job"}],"Project_Management":[{"name":"Junior Project Manager","category":"Project_Management","type":"student_job"}],"Finance_&_Office_Management":[{"name":"Finance Assistant","category":"Finance_&_Office_Management","type":"student_job"}]}}};
+/* ]]> */
+</script>
+<script src="../../wp-content/cache/minify/a9b30dc0a.js?x22406"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.bornfight.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script src="../../wp-content/cache/minify/0fef6dc0a.js?x22406"></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LffF58UAAAAAEnSqRM4ycJxYdL9hvLRI_5qXPdA&amp;ver=3.0'></script>
+<script src="../../wp-content/cache/minify/13d7ddc0a.js?x22406"></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6LffF58UAAAAAEnSqRM4ycJxYdL9hvLRI_5qXPdA',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="http://js.hs-scripts.com/7022902.js"></script>
+
+</body>
+
+<!-- Mirrored from www.bornfight.com/blog/getting-started-with-vr-development/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 May 2020 13:23:38 GMT -->
+</html>

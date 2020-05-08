@@ -1,1 +1,0 @@
-# mandhari.madebykazi.com
